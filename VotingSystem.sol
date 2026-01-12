@@ -27,6 +27,7 @@ contract VotingSystem{
         _;
     }
     function vote(uint _id) public Checking(){
+        require(_id < voterNames.length, "Invalid proposal ID");
         voterNames[_id].voteCount++;
         hasVote[msg.sender] = true;
     }
