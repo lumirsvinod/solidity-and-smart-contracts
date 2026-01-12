@@ -13,8 +13,8 @@ contract VotingSystem{
     mapping (address => bool) hasVote;
 
     constructor(){
-        voterNames.push(Proposal(1, "Eleven", 0));
-        voterNames.push(Proposal(2, "Vecna", 0));
+        voterNames.push(Proposal(0, "Eleven", 0));
+        voterNames.push(Proposal(1, "Vecna", 0));
     }
 
     function listCandidates() public view returns (Proposal[] memory) {
